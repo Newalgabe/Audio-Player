@@ -1,0 +1,202 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("https://www.metal-archives.com/images/2/2/5/4/22544.jpg?2949");
+    margin: 0;
+    color: #fff;
+}
+
+.audio-player {
+    background: rgba(26, 26, 26, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    padding: 30px 20px;
+    width: 350px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.audio-player:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
+
+#album-cover {
+    width: 100%;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+#album-cover:hover {
+    transform: scale(1.05);
+}
+
+.song-info {
+    margin-bottom: 20px;
+}
+
+#song-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+#song-artist {
+    font-size: 14px;
+    margin: 0;
+    color: #aaa;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.btn {
+    background: #4CAF50;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 14px;
+    outline: none;
+    flex: 1 1 30%;
+    margin: 5px;
+    min-width: 30%;
+    box-sizing: border-box;
+}
+
+.btn:hover {
+    background: #45a049;
+    transform: scale(1.1);
+}
+
+.btn:active {
+    transform: scale(1);
+}
+
+.volume-container {
+    margin-top: 20px;
+}
+
+.volume-container label {
+    font-size: 14px;
+    color: #ccc;
+    margin-right: 10px;
+}
+
+.volume {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.progress-container {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    color: #ccc;
+}
+
+#current-time, #duration {
+    flex: 1;
+}
+
+#progress {
+    flex: 5;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.progress {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 5px;
+    background: #4CAF50;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+.progress::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.progress::-webkit-slider-thumb:hover {
+    background: #45a049;
+}
+
+.progress::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.progress::-moz-range-thumb:hover {
+    background: #45a049;
+}
+
+.lyrics-container {
+    margin-top: 20px;
+    background: rgba(34, 34, 34, 0.9);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-height: 200px; /* Fixed height */
+    overflow-y: auto; /* Scrollable */
+    scrollbar-width: thin;
+    scrollbar-color: #4CAF50 #222;
+    transition: transform 0.3s;
+}
+
+.lyrics-container:hover {
+    transform: translateY(-5px);
+}
+
+.lyrics-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.lyrics-container::-webkit-scrollbar-track {
+    background: #222;
+}
+
+.lyrics-container::-webkit-scrollbar-thumb {
+    background-color: #4CAF50;
+    border-radius: 10px;
+}
+
+#lyrics {
+    font-size: 16px;
+    color: #fff;
+    text-align: left;
+    white-space: pre-wrap;
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    padding-right: 10px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
